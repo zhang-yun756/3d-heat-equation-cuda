@@ -26,6 +26,8 @@ set(SOURCES
     src/main.cpp
     src/stencil_kernel.cu
     src/cuda_graph_solver.cpp
+    src/domain_decomp.cpp
+    src/halo_exchange.cpp
 )
 
 set(HEADERS
@@ -34,6 +36,8 @@ set(HEADERS
     include/heat_solver.hpp
     include/stencil_kernel.cuh
     include/cuda_graph_solver.hpp
+    include/domain_decomp.hpp
+    include/halo_exchange.hpp
 )
 
 add_executable(heat_solver_cuda ${SOURCES} ${HEADERS})
