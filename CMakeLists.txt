@@ -24,12 +24,16 @@ include_directories(
 
 set(SOURCES
     src/main.cpp
+    src/stencil_kernel.cu
+    src/cuda_graph_solver.cpp
 )
 
 set(HEADERS
     include/memory_manager.hpp
     include/field.hpp
     include/heat_solver.hpp
+    include/stencil_kernel.cuh
+    include/cuda_graph_solver.hpp
 )
 
 add_executable(heat_solver_cuda ${SOURCES} ${HEADERS})
